@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding: 1rem 1rem;
+  font-family: var(--font-base);
+  box-sizing: border-box;
+
+}
+.header__nav {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+.header__nav a {
+  font-size: 1.2rem;
+  text-align: center;
+  border-right: 2px solid black;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  box-sizing: border-box;
+}
+.header__nav a:last-child {
+  border: none;
+}
