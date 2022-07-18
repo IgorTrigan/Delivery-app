@@ -1,17 +1,32 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { changeShop } from '../../store/cartSlice'
+import Button from '../../UI/button/Button'
 
-import { storeNames } from '../../Constants/data'
 import './SideBarShops.css'
 
 const SideBarShops = () => {
+  const dispatch = useDispatch()
+  const store = useSelector((state) => state.cart)
+  let isEmptyCart = store.totalPrice === 0
+  function oderGoods(shop) {
+    isEmptyCart && store.shopName !== shop && dispatch(changeShop(shop))
+  }
+
   return (
     <div className='shop__items'>
       <h2>Choose your favorite store</h2>
-      {storeNames.map((store, index) => (
-        <button className='custom__button' key={index + store}>
-          {store}
-        </button>
+      {Object.keys(store.menu).map((shop, index) => (
+        <Button
+          shop={shop}
+          key={index + shop}
+          btn_shop_Clc='btn_shop_Clc'
+          onClick={() => oderGoods(shop)}
+        >
+          {shop}
+        </Button>
       ))}
+      {}
     </div>
   )
 }

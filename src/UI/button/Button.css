@@ -1,0 +1,51 @@
+button.btn_shop_Clc {
+  margin-top: 3rem;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+}
+button.btn_shop_Clc {
+  text-transform: uppercase;
+  padding: 0.8rem 1.5rem;
+  background: #fefff0;
+  box-shadow: 1px 4px 5px 2px #81817d;
+  border-radius: 0.75rem;
+  transition: transform 0.15s;
+  transform-style: preserve-3d;
+}
+button.btn_shop_Clc::before {
+  background: #f9f4c4;
+  border-radius: inherit;
+  box-shadow: 1px 2px 3px 2px #adb185, 0 0.625em 0 0 #fdffe2;
+  transform: translate3d(0, 1rem, -1rem);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+button.btn_shop_Clc:hover {
+  background: rgb(243, 243, 243);
+  transform: translate(0, 0.25rem);
+}
+
+button.btn_shop_Clc:hover::before {
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+button.btn_shop_Clc:active {
+  background: #6d6d6d;
+  box-shadow: 1px -1px 3px 1px #676767;
+  transform: translate(0em, 0.75em);
+}
+
+button.btn_shop_Clc:active::before {
+  transform: translate3d(0, 0, -1em);
+}
+
+button.btn_shop_Clc.active {
+  background: #cbcbcb;
+  box-shadow: 1px 1px 3px 1px #676767;
+  transform: translate3d(0, 0, -1em);
+}

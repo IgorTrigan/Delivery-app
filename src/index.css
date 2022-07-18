@@ -19,6 +19,11 @@
   scroll-behavior: smooth;
 }
 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 a {
   color: unset;
   text-decoration: none;
