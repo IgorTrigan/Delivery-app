@@ -5,15 +5,24 @@ import './GalleryCards.css'
 
 import { useSelector } from 'react-redux'
 
-const GalleryCards = () => {
+const GalleryCards = ({ OnlyOrdered = false }) => {
   const state = useSelector((state) => state.cart)
-
-  useEffect(() => {}, [state.shopName])
+  const products = state.menu[state.shopName]
+  let filteredProducts = []
+  if (OnlyOrdered) {
+    filteredProducts = state.menu[state.shopName].filter(
+      (product) => product.count > 0
+    )
+  }
 
   return (
     <div className='gallery-cards'>
-      {state.menu[state.shopName].map((goods, i) => (
-        <CardItem namePrice={goods} key={i + goods.name} />
+      {(OnlyOrdered ? filteredProducts : products).map((goods, i) => (
+        <CardItem
+          namePrice={goods}
+          key={i + goods.name}
+          OnlyOrdered={OnlyOrdered}
+        />
       ))}
     </div>
   )

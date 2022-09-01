@@ -2,10 +2,8 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid black;
-  padding: 1rem 1rem;
+  padding-left: 1rem;
   font-family: var(--font-base);
-  box-sizing: border-box;
-
 }
 .header__nav {
   display: flex;
@@ -28,4 +26,11 @@
 }
 .header__nav a:last-child {
   border: none;
+}
+
+.header__nav .active {
+  font-family: var(--font-base);
+  color: var(--color-golden);
+  font-weight: 700;
+  font-size: 1.5rem;
 }

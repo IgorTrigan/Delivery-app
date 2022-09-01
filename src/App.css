@@ -1,6 +1,9 @@
 .section__padding {
   padding: 4rem 6rem;
 }
+.app {
+  border: 1px solid red;
+}
 
 .flex__center {
   display: flex;

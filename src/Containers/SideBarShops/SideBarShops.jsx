@@ -20,7 +20,7 @@ const SideBarShops = () => {
         <Button
           shop={shop}
           key={index + shop}
-          btn_shop_Clc='btn_shop_Clc'
+          btn_Cls='btn_shop_Cls'
           onClick={() => oderGoods(shop)}
         >
           {shop}
